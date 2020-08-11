@@ -1,0 +1,12 @@
+<div *ngIf="todo.completed" class="callout secondary hover unselectable" (click)="toggle(todo)">
+    <h5 style="text-decoration: line-through;">{{ todo.name }}</h5>
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true" (click)="deleteTodo(todo)">&times;</span>
+    </button>
+</div>
+<div *ngIf="!todo.completed" class="callout alert hover unselectable" (click)="toggle(todo)">
+    <h5>{{ todo.name }}</h5>
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true" (click)="deleteTodo(todo)">&times;</span>
+      </button>
+</div>
